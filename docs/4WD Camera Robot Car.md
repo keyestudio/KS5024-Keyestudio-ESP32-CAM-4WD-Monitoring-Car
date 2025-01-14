@@ -12,24 +12,24 @@ Therefore, the car not only features excellent moving performance, but also play
 
 | N.O. |           PIC           |                          NAME                          | QTY  |
 | :--: | :---------------------: | :----------------------------------------------------: | :--: |
-|  1   | ![img](./media/b1.jpg)  |                    ESP32 Cam board                     |  1   |
-|  2   | ![img](./media/b2.jpg)  |                     CH340 adapter                      |  1   |
-|  3   | ![img](./media/b3.jpg)  |         L298N V2 DC stepper motor drive board          |  1   |
-|  4   | ![img](./media/b11.jpg) |                   DC motor-10cm line                   |  2   |
-|  5   | ![img](./media/b4.jpg)  |                   DC motor-15cm line                   |  2   |
-|  6   | ![img](./media/b5.jpg)  |                         wheel                          |  4   |
+|  1   | ![img](./media/b1.jpg)  |              ESP32-CAM Development Board               |  1   |
+|  2   | ![img](./media/b2.jpg)  |               ESP32-CAM Expansion Board                |  1   |
+|  3   | ![img](./media/b3.jpg)  |              DC stepper motor drive board              |  1   |
+|  4   | ![img](./media/b11.jpg) |                  Motor with100mm wire                  |  2   |
+|  5   | ![img](./media/b4.jpg)  |                  Motor with150mm wire                  |  2   |
+|  6   | ![img](./media/b5.jpg)  |                         Wheel                          |  4   |
 |  7   | ![img](./media/b6.jpg)  |                M3*10MM flat head screw                 |  3   |
 |  8   | ![img](./media/b7.jpg)  |                M3*30MM round head screw                |  4   |
 |  9   | ![img](./media/b8.jpg)  |                M3*8MM round head screw                 |  16  |
 |  10  | ![img](./media/b9.jpg)  |                         M3 nut                         |  7   |
 |  11  | ![img](./media/b8.jpg)  |                M3*12MM round head screw                |  1   |
 |  12  | ![img](./media/b10.jpg) |            M3*10MM dual pass copper pillar             |  4   |
-|  13  | ![img](./media/b12.jpg) |                    motor holder pad                    |  4   |
+|  13  | ![img](./media/b12.jpg) |                       Fixed part                       |  4   |
 |  14  | ![img](./media/b14.jpg) | 18650 battery holder<br />(batteries are not included) |  1   |
 |  15  | ![img](./media/b15.jpg) |                     acrylic board                      |  1   |
 |  16  | ![img](./media/b16.jpg) |                      screwdriver                       |  1   |
 |  17  | ![img](./media/b17.jpg) |                        antenna                         |  1   |
-|  18  | ![img](./media/b18.jpg) |                      DuPont wire                       |  10  |
+|  18  | ![img](./media/b18.jpg) |                  10P F-F DuPont wire                   |  1   |
 
 # **3. ESP32 Cam Module**
 
@@ -1060,13 +1060,13 @@ Take the car as a reference, so the rotation direction of two motors is forwards
 
 The left motor is controlled by GPIO12 and GPIO13; the right one is controlled by GPIO13 and GPIO14.
 
-| Car state  | GPIO12(L) | GPIO13(L) | GPIO14(R) | GPIO15(R) | Left motor | Right motor |
-| :--------: | :-------: | :-------: | :-------: | :-------: | :--------: | :---------: |
-|  FORWARD   |    LOW    |   HIGH    |    LOW    |   HIGH    |  forwards  |  forwards   |
-|  BACKWARD  |   HIGH    |    LOW    |   HIGH    |    LOW    |  reversal  |  reversal   |
-| TURN LEFT  |   HIGH    |    LOW    |    LOW    |   HIGH    |  reversal  |  forwards   |
-| TURN RIGHT |    LOW    |   HIGH    |   HIGH    |    LOW    |  forwards  |  reversal   |
-|    STOP    |    LOW    |    LOW    |    LOW    |    LOW    |    stop    |    stop     |
+| Car state  | GPIO12\(L) | GPIO13\(L) | GPIO14\(R) | GPIO15\(R) | Left motor | Right motor |
+| :--------: | :--------: | :--------: | :--------: | :--------: | :--------: | :---------: |
+|  FORWARD   |    LOW     |    HIGH    |    LOW     |    HIGH    |  forwards  |  forwards   |
+|  BACKWARD  |    HIGH    |    LOW     |    HIGH    |    LOW     |  reversal  |  reversal   |
+| TURN LEFT  |    HIGH    |    LOW     |    LOW     |    HIGH    |  reversal  |  forwards   |
+| TURN RIGHT |    LOW     |    HIGH    |    HIGH    |    LOW     |  forwards  |  reversal   |
+|    STOP    |    LOW     |    LOW     |    LOW     |    LOW     |    stop    |    stop     |
 
 ## 10.5 Codes to Drive Motors
 

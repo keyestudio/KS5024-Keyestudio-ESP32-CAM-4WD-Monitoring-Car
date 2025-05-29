@@ -15,8 +15,8 @@
 #include "esp_http_server.h"   // ESP32 HTTP server library, used to handle Web requests
 
 // Replace with your network credentials
-const char *ssid = "your_SSID";      // Set to your Wi-Fi name
-const char *password = "your_PASSWORD";  // Set to your Wi-Fi passwords
+ const char *ssid = "your_SSID";      // Set to your Wi-Fi name
+ const char *password = "your_PASSWORD";  // Set to your Wi-Fi passwords
 
 //Set camera pins
 #define PWDN_GPIO_NUM 32
@@ -44,9 +44,9 @@ const char *password = "your_PASSWORD";  // Set to your Wi-Fi passwords
 #define MOTOR_L_PIN_2 12
 //Set LED pins
 #define LED_GPIO_NUM 4  
-//The variable of speed value is initially 85
-int MOTOR_R_Speed = 85;
-int MOTOR_L_Speed = 85;
+//The variable of speed value is initially 170
+int MOTOR_R_Speed = 170;
+int MOTOR_L_Speed = 170;
 
 #define PART_BOUNDARY "123456789000000000000987654321" // A boundary used to split MIME streams
 static const char *_STREAM_CONTENT_TYPE = "multipart/x-mixed-replace;boundary=" PART_BOUNDARY;
